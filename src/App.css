@@ -1,0 +1,28 @@
+/*Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-image: url(../public/assets/images/bg.png);
+  background-size: cover;
+  background-position-x: center;
+  height: 100vh;
+}
+
+:root{
+  --primary_color: #03318C;
+  --second_color: #021F59;
+  --third_color: #056CF2;
+  --fourth_color: #0583F2;
+  --fifth_color: #0D0D0C;
+}

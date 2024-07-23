@@ -1,0 +1,44 @@
+section.home-info{
+    width: 100%;
+    height: calc((100vh) - 15.4vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.home-info h1 {
+    font-family: "Playwrite DK Loopet", cursive;
+    color: #fff;
+    font-size: 15vh;
+    text-shadow: 1vh 1vh 2px rgba(0,0,0,.7);
+}
+
+section.home-info p{
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-size: 2.5vh;
+}
+
+section.home-info button {
+    margin-top: 1vh;
+    width: 30vh;
+    height: 7vh;
+    border-radius: 1.5vh;
+    border: .4vh solid var(--third_color);
+    background-color: var(--second_color);
+    color: #fff;
+    font-family: "Poppins", monospace;
+    font-size: 4.5vh;
+    cursor: pointer;
+    transition: .2s;
+}
+
+section.home-info button:hover{
+    transform: translate(-.5vh,-.5vh);
+    box-shadow: .5vh .5vh 0px #fff;
+}
+section.home-info button:active{
+    transform: translate(0,0);
+    box-shadow: none;
+}
