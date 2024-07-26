@@ -20,7 +20,7 @@ const Header = () => {
                 {location.pathname !== '/start' && (
                     <div className="sign-up">
                         <Link to='/login'><button>Entrar</button></Link>
-                        <button className="register">Cadastre-se</button>
+                        <Link to='/register'><button className="register">Cadastre-se</button></Link>
                     </div>
                 )}
             </nav>

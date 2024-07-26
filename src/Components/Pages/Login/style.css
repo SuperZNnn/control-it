@@ -2,10 +2,149 @@
     position: relative;
     top: 2.1vh;
     left: 50%;
-    transform: translate(-50%);
+    top: 42.5vh;
+    transform: translate(-50%,-50%);
     width: 65vh;
-    height: 80vh;
+    padding: 5vh 0;
     background-color: rgba(3, 49, 140,.4);
     border-radius: 2vh;
     border: .6vh solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.login-form h1{
+    font-family: "Roboto Mono", monospace;
+    color: #fff;
+    font-size: 7vh;
+    text-align: center;
+}
+
+.login-form input{
+    background-color: transparent;
+    border: .4vh solid var(--fourth_color);
+    width: 90%;
+    height: 4vh;
+    border-radius: 1vh;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0,.7);
+    transition: .2s;
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    font-size: 2.5vh;
+}
+.login-form input:focus{
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    font-weight: bolder;
+}
+.login-form input.hideAnim{
+    animation: input-fade-out 1s ease-in-out forwards;
+}
+.login-form input.showAnim{
+    animation: input-fade-in 1s ease-in-out backwards;
+}
+.login-form input.hidded{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0%;
+}
+
+.login-form form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh
+}
+p.error-message{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+p.error-message.hidded{
+    position: absolute;
+    opacity: 0;
+}
+
+.login-form .buttons-container{
+    width: 80%;
+    display: flex;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form button{
+    width: 50%;
+    border-radius: 1.1vh;
+    height: 5vh;
+    border: .4vh solid var(--fourth_color);
+    font-family: 'Poppins',sans-serif;
+    font-size: 2.5vh;
+    background-color: var(--fifth_color);
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0,.7);
+}
+.login-form button:hover{
+    background-color: transparent;
+}
+.login-form button:active{
+    color: var(--fifth_color);
+    box-shadow: none;
+}
+
+@keyframes input-fade-out {
+    0%{
+        width: 90%;
+    }
+    50%{
+        height: 4vh;
+    }
+    90%{
+        position: relative;
+        opacity: 1;
+    }
+    100%{
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0%;
+    }
+}
+@keyframes input-fade-in {
+    100%{
+        width: 90%;
+    }
+    50%{
+        height: 4vh;
+    }
+    10%{
+        position: relative;
+        opacity: 1;
+        
+    }
+    0%{
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0%;
+    }
+}
+
+@media (max-width: 450px) {
+    .login-form{
+        width: 90%;
+    }
+    .login-form .buttons-container{
+        width: 45vh;
+        flex-wrap: wrap;
+    }
 }
