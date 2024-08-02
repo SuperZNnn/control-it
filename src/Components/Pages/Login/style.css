@@ -148,3 +148,55 @@ p.error-message.hidded{
         flex-wrap: wrap;
     }
 }
+
+.form-load-bar{
+    width: 90%;
+    height: 1vh;
+    border-radius: 1vh;
+    overflow: hidden;
+}
+.form-load-bar .loader{
+    height: 1vh;
+}
+
+.form-load-bar.load-anim{
+    background-color: rgba(5, 131, 242, .3);
+}
+.form-load-bar.load-anim .loader.intro{
+    background-color: var(--fifth_color);
+    animation: load-intro 1s forwards ease-in-out;
+}
+.form-load-bar.load-anim .loader.outro{
+    background-color: var(--fifth_color);
+    animation: load-outro 1s forwards ease-in-out;
+}
+
+@keyframes load-intro {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+@keyframes load-outro {
+    0%{
+        width: 70%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.form-separator {
+    background-color: #fff;
+    width: 90%;
+    height: .4vh;
+    border-radius: 1vh;
+}
+
+h2.continue-with{
+    font-family: "Roboto Mono", monospace;
+    color: #fff;
+    font-size: 2.5vh;
+}
